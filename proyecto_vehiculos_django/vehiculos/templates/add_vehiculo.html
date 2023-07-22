@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form method="POST" action="add">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="marca" class="form-label">Marca</label>
+            {{form.marca}}
+        </div>
+        <div class="mb-3">
+            <label for="modelo" class="form-label">Modelo</label>
+            {{form.modelo}}
+        </div>
+        <div class="mb-3">
+            <label for="serial_carroceria" class="form-label">Serial carroceria</label>
+            {{form.serial_carroceria}}
+        </div>
+        <div class="mb-3">
+            <label for="serial_motor" class="form-label">Serial motor</label>
+            {{form.serial_motor}}
+        </div>
+        <div class="mb-3">
+            <label for="categoria" class="form-label">Categoria</label>
+            {{form.categoria}}
+        </div>
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            {{form.precio}}
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+{% endblock %}

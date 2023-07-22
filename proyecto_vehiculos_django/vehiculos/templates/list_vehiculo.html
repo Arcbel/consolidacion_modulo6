@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Serial carroceria</th>
+                <th>Serial motor</th>
+                <th>Categoria</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehiculo in vehiculos %}
+                <tr>
+                    <td>{{vehiculo.marca}}</td>
+                    <td>{{vehiculo.modelo}}</td>
+                    <td>{{vehiculo.serial_carroceria}}</td>
+                    <td>{{vehiculo.serial_motor}}</td>
+                    <td>{{vehiculo.categoria}}</td>
+                    <td>{{vehiculo.precio}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
